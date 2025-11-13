@@ -57,7 +57,7 @@ impl<'a> S3Action<'a> for GetObjectAttributes<'a> {
 
     fn sign_with_time(&self, expires_in: Duration, time: &Timestamp) -> Url {
         let url = self.bucket.object_url(self.object).unwrap();
-        let query = iter::once(("attributes", ""));
+        let query = iter::once(("attributes", "1"));
 
         match self.credentials {
             Some(credentials) => sign(
