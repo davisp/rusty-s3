@@ -13,6 +13,8 @@ pub use self::delete_objects::{DeleteObjects, DeleteObjectsResponse, ObjectIdent
 #[cfg(feature = "full")]
 pub use self::get_bucket_policy::{GetBucketPolicy, GetBucketPolicyResponse};
 pub use self::get_object::GetObject;
+#[cfg(feature = "full")]
+pub use self::get_object_attributes::GetObjectAttributes;
 pub use self::head_bucket::HeadBucket;
 pub use self::head_object::HeadObject;
 #[cfg(feature = "full")]
@@ -37,6 +39,8 @@ mod delete_objects;
 #[cfg(feature = "full")]
 mod get_bucket_policy;
 mod get_object;
+#[cfg(feature = "full")]
+mod get_object_attributes;
 mod head_bucket;
 mod head_object;
 #[cfg(feature = "full")]
